@@ -64,3 +64,19 @@ def show_user(*args, **kwargs):
     print("Keyword:", kwargs)
 
 show_user(10, 20, 30, name="Avishek", active=True)
+
+def create_user(name, *, age, active):
+    print(name, age, active)
+create_user("Avishek", age=29, active=True)
+
+# def create_request(method, *, timeout, retries):
+#     print(f"Method:{method},Timeout:{timeout},Retries:{retries}")
+
+# create_request("GET", timeout=5, retries=3) 
+
+def create_request(*, method, timeout, retries):
+    print(f"Method: {method}")
+    print(f"Timeout: {timeout}")
+    print(f"Retries: {retries}")
+
+create_request(method="GET", timeout=5, retries=3)     
