@@ -7,6 +7,10 @@ class User:
         print(cls)
         return cls(name)
 
+    @staticmethod
+    def static_method(arg):
+        return arg   
+
     def __str__(self):
         return f"Username is {self.name}"
 
@@ -17,7 +21,7 @@ user1 = User('Avishek')
 user2 = User('Avishek')
 user3 = User.create_user("Avishek")
 user4 = user1.create_user("Avishek")
-
+print("Static method", User.static_method("aa"))
 print(user1)
 print(user2)
 print(user3)
