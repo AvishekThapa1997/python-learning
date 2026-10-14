@@ -10,7 +10,7 @@ users = [
 ]
 async def get_user(user_id):
     print("Fetching")
-    await time.sleep(2)
+    await asyncio.sleep(2)
     user = next((user for user in users if user["id"] == user_id), None)
     return user
 
