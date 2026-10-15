@@ -17,3 +17,23 @@ class Blog(BaseModel):
     content:str
     image_url: Optional[str] = None
 
+cart_data = {
+    "user_id":101,
+    "items" : [
+        {
+            "id" : 1,
+            "name" : "Laptop"
+        },
+        {
+            "id" : 2,
+            "name" : "Mouse"
+        }
+    ],
+    "quantities":{
+        "laptop":2,
+        "mouse":3
+    }
+}
+
+cart = Cart(**cart_data)
+print(cart)
