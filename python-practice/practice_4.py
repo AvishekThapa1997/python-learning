@@ -33,7 +33,7 @@ orders = [
 
 
 def generate_result_by_category(orders):
-    result = dict()
+    result = {}
     for order in orders:
         category = order['category']
         is_vip = order.get("vip", False)
