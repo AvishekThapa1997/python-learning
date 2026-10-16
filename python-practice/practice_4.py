@@ -1,6 +1,3 @@
-from functools import reduce
-
-
 orders = [
     {
         "order_id": 101,
