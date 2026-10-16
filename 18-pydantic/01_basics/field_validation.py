@@ -17,6 +17,7 @@ class SignUpData(BaseModel):
 
     @model_validator(mode="after")
     def is_password_match(cls, values):
+        print(cls)
         if values.password != values.confirm_password:
             raise ValueError("Password and confirm password did not match")
         return values
