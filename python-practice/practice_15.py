@@ -45,3 +45,7 @@ complex_report_ids = []
 for report in reports:
     if report['status'] == "failed" and report['duration'] >= 500 and report['service'] == "payments":
         complex_report_ids.append(report)
+def calculate_average_order_value(total_amount, order_count):
+    if order_count <= 0:
+        raise ValueError('order_count cannot be less than or equal to zero')
+    return total_amount / order_count
