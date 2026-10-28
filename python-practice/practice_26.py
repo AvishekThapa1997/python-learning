@@ -6,11 +6,21 @@ class User:
         print("TEST")    
 
 
-class Admin(User):
-    def display_name(self):
+class Admin1(User):
+    def test(self):
+        print("Admin1")
         super().test()
-        return super().__name
+
+class Admin2(User):
+    def test(self):
+        print("Admin2")
+        super().test()
+
+class Admin(Admin1, Admin2):
+    def test(self):
+        print("Admin")
+        super().test()
 
 
 admin = Admin("Alex")
-print(admin.display_name())  # Alex
+admin.test()
